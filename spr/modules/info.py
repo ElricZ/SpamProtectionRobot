@@ -92,7 +92,7 @@ async def get_info(entity):
     return chat
 
 
-@spr.on_message(filters.command("info"), group=3)
+@spr.on_message(filters.command("spinfo"), group=3)
 async def info_func(_, message: Message):
     if message.reply_to_message:
         reply = message.reply_to_message
