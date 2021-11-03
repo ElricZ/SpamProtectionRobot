@@ -1,4 +1,4 @@
-import asyc
+import asyncio
 import re
 from importlib import import_module as import_
 
@@ -44,16 +44,9 @@ async def main():
 @spr.on_message(filters.command(["sphelp", "spstart"]), group=2)
 async def help_command(_, message: Message):
     if message.chat.type != "private":
-        kb = ikb({"Help": f"https://t.me/{BOT_USERNAME}?start=help"})
-        return await message.reply("Pm Me For Help", reply_markup=kb)
-    kb = ikb(
-        {
-            "Help": "bot_commands",
-        }
-    )
     mention = message.from_user.mention
     await message.reply_photo(
-        "https://hamker.me/logo_3.png",
+        "https://telegra.ph/file/4b63b2380ef62b669d101.mp4",
         caption=f"Hi {mention}, I'm Stacy SPB, I can protect "
         + "your group from Spam and NSFW media using "
         + "machine learning. Choose an option from below."
