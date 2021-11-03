@@ -96,9 +96,14 @@ async def help_button(client, query: CallbackQuery):
     create_match = re.match(r"help_create", query.data)
     u = query.from_user.mention
     top_text = (
-        f"Hello {u}, I'm SpamProtectionRobot, I can protect "
+        f"Hello {u}, I'm Stacy SPB, I can protect "
         + "your group from Spam and NSFW media using "
         + "machine learning. Choose an option from below."
+        + " Here is the help for Stacy's Spam Protection:"
+        + "/anti_nsfw [ENABLE|DISABLE] - Enable or disable NSFW Detection."
+        + "/anti_spam [ENABLE|DISABLE] - Enable or disable Spam Detection."
+        + "/nsfw_scan - Classify a media."
+        + "/spam_scan - Get Spam predictions of replied message."
     )
     if mod_match:
         module = mod_match.group(1)
