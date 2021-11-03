@@ -1,4 +1,4 @@
-import asyncio
+import asyc
 import re
 from importlib import import_module as import_
 
