@@ -11,16 +11,6 @@ from spr.utils.db import (add_chat, add_user, chat_exists,
                           is_chat_blacklisted, is_user_blacklisted,
                           user_exists)
 
-__MODULE__ = "Info"
-__HELP__ = """
-**Get Info About A Chat Or User**
-
-/info [CHAT_ID/Username|USER_ID/Username]
-
-or you can use inline mode >>
-@SpamProtectionRobot [CHAT_ID/Username|USER_ID/Username]
-"""
-
 
 async def get_user_info(user):
     try:
