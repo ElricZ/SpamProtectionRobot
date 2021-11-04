@@ -45,7 +45,7 @@ async def main():
 async def help_command(_, message: Message):
     if message.chat.type != "private":
      kb = ikb({"Help": f"https://t.me/{BOT_USERNAME}?start=help"})
-        return await message.reply("Pm Me For Help", reply_markup=kb)
+     return await message.reply("Pm Me For Help", reply_markup=kb)
     kb = ikb(
         {
             "Support Chat": "https://t.me/TheMountKodeChat",
