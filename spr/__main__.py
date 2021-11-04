@@ -44,6 +44,13 @@ async def main():
 @spr.on_message(filters.command(["sphelp", "spstart"]), group=2)
 async def help_command(_, message: Message):
     if message.chat.type != "private":
+     kb = ikb({"Help": f"https://t.me/{BOT_USERNAME}?start=help"})
+        return await message.reply("Pm Me For Help", reply_markup=kb)
+    kb = ikb(
+        {
+            "Support Chat": "https://t.me/TheMountKodeChat",
+        }
+    )
     mention = message.from_user.mention
     await message.reply_photo(
         "https://telegra.ph/file/4b63b2380ef62b669d101.mp4",
@@ -61,7 +68,7 @@ async def help_command(_, message: Message):
 
 @spr.on_message(filters.command("runs"), group=3)
 async def runs_func(_, message: Message):
-    await message.reply("What am i? Rose?")
+    await message.reply("Heya, I'm Running Properly!")
 
 
 if __name__ == "__main__":
